@@ -28,11 +28,11 @@ bool LZ4CompressionWorker::compressMemoryChunks(MemoryListStreamPartitioner::Des
 	ctx.readCtx = &readCtx;
 	ctx.write = LZ4CompressionWorker::writeToCompressedFile;
 	ctx.writeCtx = hOutputFile;
-	ctx.compressionLevel = 16; //max compression level
+	ctx.compressionLevel = 1; //max compression level
 	ctx.compress = LZ4_compressHC2_limitedOutput;
 
 	Lz4MtStreamDescriptor streamDesc = lz4mtInitStreamDescriptor();
-	streamDesc.bd.blockMaximumSize = 2; //actual buffer size is 1 << 8 * (2 ^ val). For 2 I get 2^24 
+	streamDesc.bd.blockMaximumSize = 7; //actual buffer size is 1 << 8 * (2 ^ val). For 2 I get 2^24 
 
 	auto result = lz4mtCompress(&ctx, &streamDesc);
 

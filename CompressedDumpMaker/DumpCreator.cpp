@@ -49,14 +49,16 @@ bool DumpCreator::CreateDump()
 
 bool DumpCreator::createNativeDump(HANDLE hProcess, HANDLE hFile) const
 {
-	return MiniDumpWriteDump(
+	BOOL retCode = MiniDumpWriteDump(
 		hProcess,
 		this->_processId,
 		hFile,
 		static_cast<MINIDUMP_TYPE>(MiniDumpWithHandleData | MiniDumpWithUnloadedModules |  MiniDumpWithThreadInfo | MiniDumpWithFullMemoryInfo),
 		nullptr,
 		nullptr,
-		nullptr) == TRUE;
+		nullptr);
+
+	return retCode == TRUE;
 }
 
 bool DumpCreator::createCompressedMemorySnapshot(HANDLE hProcess, HANDLE hDumpFile) const

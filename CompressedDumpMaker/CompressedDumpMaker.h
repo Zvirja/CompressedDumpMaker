@@ -9,7 +9,7 @@
 #ifdef COMPRESSEDDUMPMAKER_EXPORTS
 #define COMPRESSEDDUMPMAKER_API extern "C" __declspec(dllexport)
 #else
-#define COMPRESSEDDUMPMAKER_API __declspec(dllimport)
+#define COMPRESSEDDUMPMAKER_API extern "C" __declspec(dllimport)
 #endif
 
 COMPRESSEDDUMPMAKER_API bool createDumpFile(unsigned long processId, std::wstring&& fileNameNoExt);

@@ -20,4 +20,4 @@
 #include "wHandle.h"
 
 
-const size_t MEM_COPY_BUFFER_SIZE = 4 * 1024 * 1024;
+const size_t MEM_COPY_BUFFER_SIZE = 4 * 1024 * 1024 - 32;
