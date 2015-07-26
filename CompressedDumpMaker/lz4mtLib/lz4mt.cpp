@@ -469,8 +469,7 @@ compressBlockDependency(Ctx& ctx, const Params& params, Lz4Mt::Xxh32& xxhStream)
 		// NOTE for "-> size_t" :
 		//		It's a workaround for g++-4.6's strange warning.
 		const auto s = params.nBlockMaximumSize + 65536;
-		return s;
-		//return std::max(s, static_cast<decltype(s)>(LZ4S_MIN_STREAM_BUFSIZE));
+		return std::max(s, static_cast<decltype(s)>(LZ4S_MIN_STREAM_BUFSIZE));
 	}();
 
 	const size_t nPool = 1;
