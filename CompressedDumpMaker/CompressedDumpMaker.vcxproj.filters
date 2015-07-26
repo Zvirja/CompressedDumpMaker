@@ -63,6 +63,24 @@
     <ClInclude Include="lz4mtLib\lz4\xxhash.h">
       <Filter>Header Files\lz4</Filter>
     </ClInclude>
+    <ClInclude Include="DumpCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MinidumpUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessSuspender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryListStreamPartitioner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompressionWorkers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -103,6 +121,21 @@
     </ClCompile>
     <ClCompile Include="lz4mtLib\lz4\xxhash.c">
       <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="DumpCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MinidumpUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessSuspender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryListStreamPartitioner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompressionWorkers.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

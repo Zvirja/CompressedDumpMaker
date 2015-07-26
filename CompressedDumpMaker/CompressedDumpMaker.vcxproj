@@ -56,6 +56,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>DbgHelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -73,6 +74,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>DbgHelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -80,6 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CompressedDumpMaker.h" />
+    <ClInclude Include="CompressionWorkers.h" />
+    <ClInclude Include="DumpCreator.h" />
     <ClInclude Include="lz4mtLib\lz4mt.h" />
     <ClInclude Include="lz4mtLib\lz4mt_compat.h" />
     <ClInclude Include="lz4mtLib\lz4mt_io_cstdio.h" />
@@ -90,8 +94,12 @@
     <ClInclude Include="lz4mtLib\lz4\lz4frame_static.h" />
     <ClInclude Include="lz4mtLib\lz4\lz4hc.h" />
     <ClInclude Include="lz4mtLib\lz4\xxhash.h" />
+    <ClInclude Include="MemoryListStreamPartitioner.h" />
+    <ClInclude Include="MinidumpUtils.h" />
+    <ClInclude Include="ProcessSuspender.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="wHandle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CompressedDumpMaker.cpp" />
@@ -103,6 +111,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="DumpCreator.cpp" />
+    <ClCompile Include="CompressionWorkers.cpp" />
     <ClCompile Include="lz4mtLib\lz4mt.cpp" />
     <ClCompile Include="lz4mtLib\lz4mt_compat.cpp" />
     <ClCompile Include="lz4mtLib\lz4mt_io_cstdio.cpp" />
@@ -113,6 +123,9 @@
     <ClCompile Include="lz4mtLib\lz4\lz4frame.c" />
     <ClCompile Include="lz4mtLib\lz4\lz4hc.c" />
     <ClCompile Include="lz4mtLib\lz4\xxhash.c" />
+    <ClCompile Include="MemoryListStreamPartitioner.cpp" />
+    <ClCompile Include="MinidumpUtils.cpp" />
+    <ClCompile Include="ProcessSuspender.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

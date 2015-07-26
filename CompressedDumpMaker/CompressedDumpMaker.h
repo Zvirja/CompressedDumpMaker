@@ -20,3 +20,4 @@ public:
 extern COMPRESSEDDUMPMAKER_API int nCompressedDumpMaker;
 
 COMPRESSEDDUMPMAKER_API int fnCompressedDumpMaker(void);
+
