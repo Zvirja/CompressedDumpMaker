@@ -47,7 +47,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;COMPRESSEDDUMPMAKER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -80,6 +80,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CompressedDumpMaker.h" />
+    <ClInclude Include="lz4mtLib\lz4mt.h" />
+    <ClInclude Include="lz4mtLib\lz4mt_compat.h" />
+    <ClInclude Include="lz4mtLib\lz4mt_io_cstdio.h" />
+    <ClInclude Include="lz4mtLib\lz4mt_mempool.h" />
+    <ClInclude Include="lz4mtLib\lz4mt_xxh32.h" />
+    <ClInclude Include="lz4mtLib\lz4\lz4.h" />
+    <ClInclude Include="lz4mtLib\lz4\lz4frame.h" />
+    <ClInclude Include="lz4mtLib\lz4\lz4frame_static.h" />
+    <ClInclude Include="lz4mtLib\lz4\lz4hc.h" />
+    <ClInclude Include="lz4mtLib\lz4\xxhash.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -93,6 +103,16 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4mt.cpp" />
+    <ClCompile Include="lz4mtLib\lz4mt_compat.cpp" />
+    <ClCompile Include="lz4mtLib\lz4mt_io_cstdio.cpp" />
+    <ClCompile Include="lz4mtLib\lz4mt_mempool.cpp" />
+    <ClCompile Include="lz4mtLib\lz4mt_result.cpp" />
+    <ClCompile Include="lz4mtLib\lz4mt_xxh32.cpp" />
+    <ClCompile Include="lz4mtLib\lz4\lz4.c" />
+    <ClCompile Include="lz4mtLib\lz4\lz4frame.c" />
+    <ClCompile Include="lz4mtLib\lz4\lz4hc.c" />
+    <ClCompile Include="lz4mtLib\lz4\xxhash.c" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\lz4">
+      <UniqueIdentifier>{f8e1824b-1c71-4aac-8941-dc155d56c007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lz4">
+      <UniqueIdentifier>{829d4531-19f5-4317-b310-8fbf88294f02}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -27,6 +33,36 @@
     <ClInclude Include="CompressedDumpMaker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4\lz4.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4\lz4frame.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4\lz4frame_static.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4\lz4hc.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4mt.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4mt_compat.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4mt_io_cstdio.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4mt_mempool.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4mt_xxh32.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="lz4mtLib\lz4\xxhash.h">
+      <Filter>Header Files\lz4</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -37,6 +73,36 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4\lz4.c">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4\lz4frame.c">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4\lz4hc.c">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4mt.cpp">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4mt_compat.cpp">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4mt_io_cstdio.cpp">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4mt_mempool.cpp">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4mt_result.cpp">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4mt_xxh32.cpp">
+      <Filter>Source Files\lz4</Filter>
+    </ClCompile>
+    <ClCompile Include="lz4mtLib\lz4\xxhash.c">
+      <Filter>Source Files\lz4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
