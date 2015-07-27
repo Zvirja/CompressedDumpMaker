@@ -8,9 +8,9 @@
 class DumpCreator
 {
 public:
-	DumpCreator(DWORD processId, std::wstring&& fileNameNoExt) :
+	DumpCreator(DWORD processId, std::wstring& fileNameNoExt) :
 		_processId(processId),
-		_fileNameNoExt(std::move(fileNameNoExt)),
+		_fileNameNoExt(fileNameNoExt),
 		_pMemCopyBuffer(new std::array<BYTE, MEM_COPY_BUFFER_SIZE>()),
 		_pCompressionWorker(std::make_unique<LZ4CompressionWorker>())
 	{
@@ -22,7 +22,7 @@ public:
 
 private:
 	DWORD _processId;
-	std::wstring _fileNameNoExt;
+	std::wstring& _fileNameNoExt;
 	std::unique_ptr <std::array<BYTE, MEM_COPY_BUFFER_SIZE> > _pMemCopyBuffer;
 	std::unique_ptr<CompressionWorkerBase> _pCompressionWorker;
 

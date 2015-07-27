@@ -12,4 +12,4 @@
 #define COMPRESSEDDUMPMAKER_API extern "C" __declspec(dllimport)
 #endif
 
-COMPRESSEDDUMPMAKER_API bool createDumpFile(unsigned long processId, std::wstring&& fileNameNoExt);
+COMPRESSEDDUMPMAKER_API bool createDumpFile(unsigned long processId, std::wstring& fileNameNoExt);
