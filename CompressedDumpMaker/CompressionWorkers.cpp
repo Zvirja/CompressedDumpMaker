@@ -28,7 +28,7 @@ bool LZ4CompressionWorker::compressMemoryChunks(MemoryListStreamPartitioner::Des
 	ctx.readCtx = &readCtx;
 	ctx.write = LZ4CompressionWorker::writeToCompressedFile;
 	ctx.writeCtx = hOutputFile;
-	ctx.compressionLevel = 1; //max compression level
+	ctx.compressionLevel = 9; //max compression level
 	ctx.compress = LZ4_compressHC2_limitedOutput;
 
 	Lz4MtStreamDescriptor streamDesc = lz4mtInitStreamDescriptor();
@@ -81,7 +81,7 @@ int LZ4CompressionWorker::readFromChunksQueue(Lz4MtContext* ctx, void* dst, int 
 
 	pCompressionChunks->pop();
 
-	return static_cast<int>(actualCopied + chunk.RegionSize);
+	return static_cast<int>(actualCopied + SERVICE_DATA_SIZE);
 }
 
 int LZ4CompressionWorker::writeToCompressedFile(const Lz4MtContext* ctx, const void* source, int sourceSize)
